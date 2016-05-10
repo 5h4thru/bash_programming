@@ -147,5 +147,5 @@ fi
 # '~' takes you to home directory
 # ^ converts the string to uppercase
 word=dSLConnECtion
-echo "Conveting the first letter to uppercase: ${word^}"
+echo "Converting the first letter to uppercase: ${word^}"
 echo "Converting all the letters to uppercase: ${word^^}"
