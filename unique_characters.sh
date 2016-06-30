@@ -149,4 +149,3 @@ fi
 word=dSLConnECtion
 echo "Converting the first letter to uppercase: ${word^}"
 echo "Converting all the letters to uppercase: ${word^^}"
-
