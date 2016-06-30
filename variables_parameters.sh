@@ -60,7 +60,7 @@ echo "Value of num is $num"
 var=${num/10/b}
 echo "Value of var after replacing 10 with letter b in num and assigning it to var: $var"
 
-# $(command) is "command substitution".  As you seem to understand, it runs the command, captures its output, and inserts that into the command line that contains the $(...)
+# $(command) is "command substitution".  As you seem to understand, it runs the command, captures its output, and inserts that into the command line that contains the $()
 # ${parameter} is "parameter substitution".  A lot of information can be found in the shell’s man page
 
 
