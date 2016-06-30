@@ -79,7 +79,7 @@ echo "The value of val2 assigned by backquotes: $val2"
 
 var=20
 if [ "$var" -gt 15 ]
-then : # The : does nothing
+then : # The : does nothing, it is like 'pass' in python
 else
   echo "$var"
 fi
@@ -104,7 +104,7 @@ echo "The value os var2 is $var2"
 
 var1=10
 echo $((var2 = var1<20?1:0))
-echo "The value of $var2 depends on outcome of var1:$var1"
+echo "The value of \"var2\" depends on outcome of var1:$var1"
 
 
 #########################
@@ -149,3 +149,4 @@ fi
 word=dSLConnECtion
 echo "Converting the first letter to uppercase: ${word^}"
 echo "Converting all the letters to uppercase: ${word^^}"
+
