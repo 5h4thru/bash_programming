@@ -23,7 +23,7 @@ fi
 # -r returns true if file exists and is readable
 if [[ ! -r "$1" || ! -r "$2" ]]
 then
-  echo "File are not real"
+  echo "Files are not real"
   exit "$E_UNREADABLE"
 fi
 
