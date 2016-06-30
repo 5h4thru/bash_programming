@@ -29,7 +29,7 @@ fi
 
 # cmp compares the two files one byte at a time
 # &> redirects both standard error and standard output
-# /dev/null is a special place (very important) like a blackhole. Whatever you put it in goes to NOWHERE
+# /dev/null is a special place (very important) like a blackhole. Whatever you put in, it goes to NOWHERE
 cmp $1 $2 &> /dev/null
 
 if [ $? -eq 0 ]
