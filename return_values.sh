@@ -30,7 +30,10 @@ fi
 # cmp compares the two files one byte at a time
 # &> redirects both standard error and standard output
 # /dev/null is a special place (very important) like a blackhole. Whatever you put in, it goes to NOWHERE
+
 cmp $1 $2 &> /dev/null
+
+# At this point, the exit status will be 0 if the files are identical (i.e) the cmp command ran with no errors
 
 if [ $? -eq 0 ]
 then
