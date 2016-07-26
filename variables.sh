@@ -54,3 +54,69 @@ echo "Outside the function. \$FUNCNAME = $FUNCNAME"
 # Part 2
 #########################
 echo -e "\n##### Part 2 #####"
+# $GROUPS : the groups where the user belongs
+echo "User belongs to group(s): $GROUPS"
+# $HOME : home directory
+# $HOSTNAME : hostname
+if [[ $HOSTNAME && $USER && $HOME ]]
+then
+  echo "Hostname : $HOSTNAME"
+  echo "User : $USER"
+  echo "Home : $HOME"
+else
+  echo "The variables are not set"
+fi
+# $HOSTTYPE : information about the system hardware
+# $MACHTYPE : machine type of the system
+
+# IFS is internal field separator; default value is space
+colors="red-brown-orange"
+new_colors="red+brown+orange"
+echo -e "\nIFS=-"
+IFS=-
+echo "colors:" $colors
+echo "new_colors :" $new_colors
+echo -e "\nIFS=+"
+IFS=+
+echo "colors :" $colors
+echo "new_colors :" $new_colors
+
+# $LINENO : line number
+# $OLDPWD : old pwd
+# $OSTYPE : OS type
+# $PIPESTATUS : exit status of piped commands
+echo "Line number : $LINENO"
+# cat test.txt | sort; echo ${PIPESTATUS[*]} prints two numbers for each in the pipe command
+
+#########################
+# Part 3
+#########################
+echo -e "\n##### Part 3 #####"
+# read is input from the keyboard
+# $REPLY stores the value from read by default
+echo "A sample question?"
+read
+# Can read into a variable also
+# read var
+echo "The answer to the question is $REPLY"
+
+# $SECONDS : time for which the scipt has been running
+LIMIT_TIME=9
+TIME_INTERVAL=3
+echo -e "\nThis script will run for $LIMIT_TIME seconds"
+echo "Press Ctrl+C to exit before time limit"
+#while [ "$SECONDS" -le "$LIMIT_TIME" ]
+#do
+#  echo "This script has been running for $SECONDS seconds"
+#  sleep $TIME_INTERVAL
+#done
+
+# declare and typeset difference is that typeset works in ksh scripts and is portable
+declare -r var_r=5 # -r makes it read-only
+echo "The value of var_r is $var_r"
+declare -i var_i=10 # -i means integer
+echo "The value of var_i is $var_i"
+var_i=blue
+echo "The value of var_i now is $var_i"
+
+
