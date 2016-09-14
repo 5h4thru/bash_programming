@@ -119,4 +119,43 @@ echo "The value of var_i is $var_i"
 var_i=blue
 echo "The value of var_i now is $var_i"
 
+#########################
+# Part 4
+#########################
+echo -e "\n##### Part 4 #####"
+# let command is used to perform arithmetic operations
+# Also can use delcare comand with -i to enforce the variable to be able to store result of arithmetic operation
+# declare with -a makes the variable an array
+declare -a x=(9 8 7 6 5)
+for i in {0..4}
+do
+ echo "${x[$i]}"
+ let i+=1
+done
 
+# declare -f declares a function
+declare -f someNewFunction
+someNewFunction()
+{
+ echo "Hey, are you having a good time? Yes, no, maybe? Or you just don't care at all?"
+}
+someNewFunction
+
+# declare -x enables the variable to be exported outside of the environment of the script
+declare -x var_x=10
+echo "Value of \$var_x is $var_x"
+# Will learn about the export functionality in later tutorial
+
+#########################
+# Part 5
+#########################
+# Random number generator
+MAX=10
+i=1
+while [ "$i" -le "$MAX" ]
+do
+ n=$RANDOM
+ echo "Value of random number is $n"
+ let i+=1
+done
+# RANDOM function is not completely random. They take a few parameters into consideration and then generate a number
