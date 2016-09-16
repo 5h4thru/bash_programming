@@ -123,4 +123,10 @@ esac
 # Select Construct
 #########################
 echo -e "\n##### Select Construct #####"
+PS3='Pick a color: ' # PS3 stands for Prompt String Three (shell prompts))
 
+select color in "red" "blue" "green" "yellow" "orange" "brown" "black" "gray"
+do
+ echo "You selected this color: $color"
+ break
+done
