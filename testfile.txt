@@ -1,5 +1,3 @@
-*************************
 Test line for reading from a file
 Internal commands
 Line3
-*************************
