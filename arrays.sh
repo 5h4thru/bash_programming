@@ -4,7 +4,7 @@
 # :2,$d deletes everything from the 2nd line from vim editor
 
 #########################
-# Arrays Part2
+# Arrays Part1
 #########################
 echo -e "\n##### Arrays Part1 #####"
 arr[0]=20
